@@ -75,13 +75,13 @@ on g.GenreId = t.GenreId;
 #13.
 SELECT emp.FirstName, emp.LastName,
 ROUND(SUM(Inv.Total), 2) as 'Total Sales' 
-FROM chinook.Employees emp
+FROM chinook.Employees emp;
 
 JOIN chinook.Customers cust 
-ON cust.SupportRepId = emp.EmployeeId
+ON cust.SupportRepId = emp.EmployeeId;
 
 JOIN chinook.Invoices Inv 
-ON Inv.CustomerId = cust.CustomerId
+ON Inv.CustomerId = cust.CustomerId;
 
 WHERE emp.Title = 'Sales Support Agent' 
 GROUP BY emp.FirstName;
@@ -89,13 +89,13 @@ GROUP BY emp.FirstName;
 #14. 
 SELECT emp.FirstName, emp.LastName,
 ROUND(SUM(Inv.Total), 2) as 'Total Sales' 
-FROM chinook.Employees emp
+FROM chinook.Employees emp;
 
 JOIN chinook.Customers cust 
-ON cust.SupportRepId = emp.EmployeeId
+ON cust.SupportRepId = emp.EmployeeId;
 
 JOIN chinook.Invoices Inv 
-ON Inv.CustomerId = cust.CustomerId
+ON Inv.CustomerId = cust.CustomerId;
 
 WHERE emp.Title = 'Sales Support Agent' 
 AND Inv.InvoiceDate LIKE '2009%' 
